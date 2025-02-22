@@ -1,5 +1,6 @@
 import Logo from "@/app/_components/Logo";
 import Navigation from "@/app/_components/Navigation";
+import "@/app/_style/globals.css";
 
 export const metadata = {
   title: "The Wild Oasis"
@@ -7,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return <html>
-    <body>
+    <body className="bg-primary-600">
       <header>
         <Logo />
         <Navigation />
