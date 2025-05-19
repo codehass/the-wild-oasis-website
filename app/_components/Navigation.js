@@ -1,14 +1,10 @@
 import Link from "next/link";
 import { auth } from "../_lib/auth";
-import { cookies } from "next/headers";
 
 export default async function Navigation() {
   const session = await auth();
 
-  const cookieStore = cookies();
-  console.log("Cookies:", cookieStore.getAll());
-
-  console.log("Session:", session);
+  console.log("session: ", session);
 
   return (
     <nav className="z-10 text-xl">
